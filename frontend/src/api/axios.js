@@ -5,14 +5,32 @@ const API = axios.create({
   withCredentials: true,
 });
 
-API.interceptors.request.use((req) => {
-  const user = JSON.parse(localStorage.getItem("user"));
+// Add token automatically to every request
+API.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem("token");
 
-  if (user?.token) {
-    req.headers.Authorization = `Bearer ${user.token}`;
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
   }
+);
 
-  return req;
-});
+// Optional: Handle unauthorized errors
+API.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 401) {
+      console.log("Unauthorized - Please Login Again");
+    }
+
+    return Promise.reject(error);
+  }
+);
 
 export default API;

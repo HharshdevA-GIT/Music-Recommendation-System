@@ -14,16 +14,19 @@ function Recommendations() {
     fetchSongs();
   }, []);
 
-  const fetchSongs = async () => {
-    try {
-      const res = await API.get("/songs");
-      setRecommendations(res.data);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  };
+ const fetchSongs = async () => {
+  try {
+    const res = await API.get("/songs");
+
+    console.log("API Response:", res.data);
+
+    setRecommendations(res.data.songs || []);
+  } catch (error) {
+    console.log("Error:", error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   const filteredRecommendations = recommendations.filter(
     (item) =>

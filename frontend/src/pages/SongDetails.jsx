@@ -16,7 +16,7 @@ function SongDetails() {
     const fetchSong = async () => {
       try {
         const res = await API.get(`/songs/${id}`);
-        setSong(res.data);
+        setSong(res.data.song);
       } catch (error) {
         console.log(error);
       } finally {

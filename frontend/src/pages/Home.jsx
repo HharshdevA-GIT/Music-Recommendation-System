@@ -13,7 +13,7 @@ function Home() {
   const fetchSongs = async () => {
     try {
       const res = await API.get("/songs");
-      setSongs(res.data);
+      setSongs(res.data.songs);
     } catch (error) {
       console.log(error);
     }

@@ -22,7 +22,7 @@ function Admin() {
       const res = await axios.get(
         "http://localhost:5000/api/songs"
       );
-      setSongs(res.data);
+      setSongs(res.data.songs);
     } catch (error) {
       console.log("FETCH ERROR:", error);
     }

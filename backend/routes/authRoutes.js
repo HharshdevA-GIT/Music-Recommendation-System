@@ -339,6 +339,7 @@ router.post("/forgot-password", async (req, res) => {
       });
     }
 
+    
     const resetToken =
       crypto.randomBytes(32).toString("hex");
 

@@ -22,10 +22,52 @@ function Navbar() {
         </Link>
 
         <Link
+          to="/dashboard"
+          className="text-white hover:text-green-400"
+        >
+          📊 Dashboard
+        </Link>
+
+        <Link
+          to="/profile"
+          className="text-white hover:text-blue-400"
+        >
+          👤 Profile
+        </Link>
+
+        <Link
           to="/recommendations"
           className="text-white hover:text-purple-400"
         >
           Recommendations
+        </Link>
+
+        <Link
+          to="/favorites"
+          className="text-white hover:text-pink-400"
+        >
+          ❤️ Favorites
+        </Link>
+
+        <Link
+          to="/playlists"
+          className="text-white hover:text-cyan-400"
+        >
+          🎶 Playlists
+        </Link>
+
+        <Link
+          to="/recently-played"
+          className="text-white hover:text-yellow-400"
+        >
+          🕒 Recently Played
+        </Link>
+
+        <Link
+          to="/admin"
+          className="text-white hover:text-orange-400"
+        >
+          ⚙️ Admin
         </Link>
 
         <button

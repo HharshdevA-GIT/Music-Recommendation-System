@@ -25,9 +25,19 @@ function Login() {
 
       localStorage.setItem("token", res.data.token);
 
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          _id: res.data._id,
+          username: res.data.username,
+          email: res.data.email,
+          role: res.data.role,
+          token: res.data.token,
+        })
+      );
+
       alert("Login Successful!");
       navigate("/preferences");
-
     } catch (err) {
       alert(err.response?.data?.message || "Login Failed!");
     }

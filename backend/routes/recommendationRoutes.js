@@ -1,21 +1,9 @@
 const express = require("express");
-const Recommendation = require("../models/Recommendation");
-const authMiddleware = require("../middleware/authMiddleware");
+const User = require("../models/User");
+const Song = require("../models/Song");
+const { authMiddleware } = require("../middleware/authMiddleware");
 
 const router = express.Router();
-
-// Add Recommendation
-router.post("/", authMiddleware, async (req, res) => {
-  try {
-    const recommendation = await Recommendation.create(req.body);
-
-    res.status(201).json(recommendation);
-  } catch (error) {
-    res.status(500).json({
-      message: error.message,
-    });
-  }
-});
 
 // Personalized Recommendations
 router.get("/", authMiddleware, async (req, res) => {
@@ -28,14 +16,30 @@ router.get("/", authMiddleware, async (req, res) => {
       });
     }
 
-    const songs = await Song.find({
-      genre: {
-        $in: user.favoriteGenres,
-      },
+    let songs = await Song.find({
+      $or: [
+        {
+          genre: {
+            $in: user.favoriteGenres || [],
+          },
+        },
+        {
+          artist: {
+            $in: user.favoriteArtists || [],
+          },
+        },
+      ],
     });
+
+    // Agar koi recommendation na mile
+    if (songs.length === 0) {
+      songs = await Song.find().limit(12);
+    }
 
     res.status(200).json(songs);
   } catch (error) {
+    console.log(error);
+
     res.status(500).json({
       message: error.message,
     });

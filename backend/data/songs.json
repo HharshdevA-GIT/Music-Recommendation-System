@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Apna Time Aail Ba",
+    "artist": "Rahul Sapkal",
+    "genre": "Bhojpuri",
+    "album": "Single",
+    "coverImage": "https://picsum.photos/300/300?random=1",
+    "audioUrl": "https://res.cloudinary.com/deyqljqxw/video/upload/v1780907414/rahulsapkal-apna-time-aail-ba-bhojpuri-motivational-rap-desi-hip-hop-beat-492627_zjkc3q.mp3"
+  },
+  {
+    "title": "Jaat Singh",
+    "artist": "Poor Artist",
+    "genre": "Haryanvi",
+    "album": "Single",
+    "coverImage": "https://picsum.photos/300/300?random=2",
+    "audioUrl": "https://res.cloudinary.com/deyqljqxw/video/upload/v1780908077/poorartistt-jaat-singh-indian-haryanvi-song-music-511083_kyyuwm.mp3"
+  },
+  {
+    "title": "Punjabi Love Vibes",
+    "artist": "Rahul Sapkal",
+    "genre": "Punjabi",
+    "album": "Single",
+    "coverImage": "https://picsum.photos/300/300?random=3",
+    "audioUrl": "https://res.cloudinary.com/deyqljqxw/video/upload/v1780908123/rahulsapkal-trending-punjabi-romantic-song-viral-love-vibes-536823_yzrfhi.mp3"
+  },
+  {
+    "title": "Bollywood Track 1",
+    "artist": "Shivam GFX",
+    "genre": "Bollywood",
+    "album": "Single",
+    "coverImage": "https://picsum.photos/300/300?random=4",
+    "audioUrl": "https://res.cloudinary.com/deyqljqxw/video/upload/v1780908138/shivamgfx-bollywood-song-313044_2_sggsax.mp3"
+  },
+  {
+    "title": "Bollywood Track 2",
+    "artist": "Shivam GFX",
+    "genre": "Bollywood",
+    "album": "Single",
+    "coverImage": "https://picsum.photos/300/300?random=5",
+    "audioUrl": "https://res.cloudinary.com/deyqljqxw/video/upload/v1780908155/shivamgfx-bollywood-song-313044_1_b14gwf.mp3"
+  },
+  {
+    "title": "Bollywood Track 3",
+    "artist": "Shivam GFX",
+    "genre": "Bollywood",
+    "album": "Single",
+    "coverImage": "https://picsum.photos/300/300?random=6",
+    "audioUrl": "https://res.cloudinary.com/deyqljqxw/video/upload/v1780908183/shivamgfx-bollywood-song-313044_fxl5wk.mp3"
+  },
+  {
+    "title": "Hindi Melody",
+    "artist": "Monda Music",
+    "genre": "Bollywood",
+    "album": "Single",
+    "coverImage": "https://picsum.photos/300/300?random=7",
+    "audioUrl": "https://res.cloudinary.com/deyqljqxw/video/upload/v1780908218/mondamusic-bollywood-indian-hindi-song-music-529567_qnzkwx.mp3"
+  }
+]
